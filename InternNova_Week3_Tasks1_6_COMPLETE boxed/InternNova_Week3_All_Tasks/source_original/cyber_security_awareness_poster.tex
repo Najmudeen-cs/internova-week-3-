@@ -1,0 +1,158 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[top=1.2cm,bottom=1.2cm,left=1.25cm,right=1.25cm]{geometry}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\pagestyle{empty}
+
+\definecolor{navy}{RGB}{31,55,80}
+\definecolor{blue}{RGB}{55,105,145}
+\definecolor{lightblue}{RGB}{239,245,250}
+\definecolor{cardgray}{RGB}{248,249,250}
+\definecolor{bordergray}{RGB}{180,187,193}
+\definecolor{darkgray}{RGB}{55,55,55}
+
+\begin{document}
+\begin{center}
+
+% Header
+\begin{tikzpicture}
+\node[draw=navy,fill=navy,rounded corners=9pt,
+minimum width=16.2cm,minimum height=3.2cm,align=center,
+text width=14.8cm,text=white] {
+{\fontsize{23}{27}\selectfont\bfseries CYBER SECURITY AWARENESS}
+
+\vspace{6mm}
+
+{\large\bfseries
+STOP \quad $\bullet$ \quad THINK \quad $\bullet$ \quad
+VERIFY \quad $\bullet$ \quad PROTECT}
+};
+\end{tikzpicture}
+
+\vspace{6mm}
+
+% Intro
+\begin{tikzpicture}
+\node[draw=blue,fill=lightblue,rounded corners=6pt,
+minimum width=16.2cm,minimum height=1.25cm,align=center,
+text width=15cm] {
+{\small\bfseries\color{navy}
+Simple habits can prevent phishing, malware,
+account compromise, and data exposure.}};
+\end{tikzpicture}
+
+\vspace{6mm}
+
+% Row 1
+\begin{tikzpicture}
+\node[draw=bordergray,fill=cardgray,rounded corners=7pt,
+minimum width=7.7cm,minimum height=3.6cm,inner sep=10pt,align=left] at (-4.0,0) {
+\begin{minipage}{6.6cm}
+{\Large\bfseries\color{blue}01}
+\vspace{1mm}
+{\large\bfseries\color{navy}NEVER SHARE PASSWORDS}
+\vspace{2mm}
+{\small\color{darkgray}
+Keep passwords private.
+
+Never share passwords or authentication codes with
+unexpected callers or messages.}
+\end{minipage}};
+\node[draw=bordergray,fill=cardgray,rounded corners=7pt,
+minimum width=7.7cm,minimum height=3.6cm,inner sep=10pt,align=left] at (4.0,0) {
+\begin{minipage}{6.6cm}
+{\Large\bfseries\color{blue}02}
+\vspace{1mm}
+{\large\bfseries\color{navy}THINK BEFORE CLICKING}
+\vspace{2mm}
+{\small\color{darkgray}
+Treat unexpected links, messages, and login requests
+with caution.
+
+Verify before taking action.}
+\end{minipage}};
+\end{tikzpicture}
+
+\vspace{5mm}
+
+% Row 2
+\begin{tikzpicture}
+\node[draw=bordergray,fill=cardgray,rounded corners=7pt,
+minimum width=7.7cm,minimum height=3.6cm,inner sep=10pt,align=left] at (-4.0,0) {
+\begin{minipage}{6.6cm}
+{\Large\bfseries\color{blue}03}
+\vspace{1mm}
+{\large\bfseries\color{navy}USE STRONG PASSWORDS}
+\vspace{2mm}
+{\small\color{darkgray}
+Use long, unique passwords or passphrases.
+
+Avoid reusing the same password across accounts.}
+\end{minipage}};
+\node[draw=bordergray,fill=cardgray,rounded corners=7pt,
+minimum width=7.7cm,minimum height=3.6cm,inner sep=10pt,align=left] at (4.0,0) {
+\begin{minipage}{6.6cm}
+{\Large\bfseries\color{blue}04}
+\vspace{1mm}
+{\large\bfseries\color{navy}ENABLE 2FA / MFA}
+\vspace{2mm}
+{\small\color{darkgray}
+Add another verification factor to important accounts
+whenever multi-factor authentication is available.}
+\end{minipage}};
+\end{tikzpicture}
+
+\vspace{5mm}
+
+% Row 3
+\begin{tikzpicture}
+\node[draw=bordergray,fill=cardgray,rounded corners=7pt,
+minimum width=7.7cm,minimum height=3.6cm,inner sep=10pt,align=left] at (-4.0,0) {
+\begin{minipage}{6.6cm}
+{\Large\bfseries\color{blue}05}
+\vspace{1mm}
+{\large\bfseries\color{navy}KEEP DEVICES UPDATED}
+\vspace{2mm}
+{\small\color{darkgray}
+Install security updates for operating systems,
+applications, and supported security software.}
+\end{minipage}};
+\node[draw=bordergray,fill=cardgray,rounded corners=7pt,
+minimum width=7.7cm,minimum height=3.6cm,inner sep=10pt,align=left] at (4.0,0) {
+\begin{minipage}{6.6cm}
+{\Large\bfseries\color{blue}06}
+\vspace{1mm}
+{\large\bfseries\color{navy}AVOID UNKNOWN FILES}
+\vspace{2mm}
+{\small\color{darkgray}
+Do not open unexpected attachments or install software
+from suspicious or unknown sources.}
+\end{minipage}};
+\end{tikzpicture}
+
+\vspace{6mm}
+
+% Footer
+\begin{tikzpicture}
+\node[draw=navy,fill=navy,rounded corners=8pt,
+minimum width=16.2cm,minimum height=2.3cm,align=center,
+text width=14.8cm,text=white] {
+{\large\bfseries WHEN IN DOUBT: STOP -- VERIFY -- REPORT}
+
+\vspace{3mm}
+
+{\small Use a trusted website, official application, or
+independently verified contact method before taking action.}
+};
+\end{tikzpicture}
+
+\vspace{4mm}
+{\small\color{darkgray}
+\textbf{Security Awareness Activity} --- Think before you click,
+verify unexpected requests, and report suspicious activity.}
+
+\end{center}
+\end{document}

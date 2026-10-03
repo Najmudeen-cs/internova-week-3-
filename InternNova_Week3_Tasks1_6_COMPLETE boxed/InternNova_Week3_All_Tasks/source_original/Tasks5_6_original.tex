@@ -1,0 +1,249 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1.65cm]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+\definecolor{navy}{RGB}{31,55,80}
+\definecolor{blue}{RGB}{55,105,145}
+\definecolor{lightblue}{RGB}{239,245,250}
+
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=blue}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textbf{InternNova -- Week 3}}
+\rhead{Malware, Phishing \& Security Awareness}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\renewcommand{\arraystretch}{1.25}
+
+\begin{document}
+\setcounter{section}{2}
+
+% ============================================================
+% TASK 5
+% ============================================================
+
+\section{Task 5: Security Awareness Scenario}
+
+\subsection{Introduction}
+
+Security awareness helps users recognize suspicious messages before they become security incidents. Phishing attacks often rely on urgency, fear, impersonation, and requests for sensitive information. This scenario demonstrates how a user should respond when receiving a suspicious account-security message.
+
+\subsection{Security Awareness Scenario}
+
+Consider the following fictional message:
+
+\begin{quote}
+\textbf{Account Security Alert}\par
+Your account will be permanently blocked within \textbf{24 hours} unless you verify your password. Please use the verification link provided in the message to confirm your account.
+\end{quote}
+
+The message creates urgency and directs the recipient to take an authentication-related action through the provided link. The scenario represents a common social-engineering situation in which an attacker attempts to create fear of account loss and pressure the recipient into revealing credentials or visiting a fraudulent website.
+
+\subsection{Security Awareness Scenario Response Process}
+
+A safe response should stop the interaction first, identify the warning signs, verify the situation independently, and report the suspicious message through the appropriate channel.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\textwidth]{images/security_awareness_scenario.pdf}
+\caption{Security Awareness Scenario Response Process}
+\end{figure}
+
+\subsection{What Type of Attack Is This?}
+
+The scenario is a \textbf{phishing attack using social engineering}. The attacker attempts to create urgency and fear of account loss so that the recipient will follow a malicious link and potentially disclose a password or other authentication information.
+
+\subsection{Warning Signs}
+
+\begin{enumerate}
+    \item \textbf{Urgent deadline:} The recipient is told that the account will be blocked within 24 hours.
+    \item \textbf{Threat of account loss:} The message uses a negative consequence to pressure the recipient.
+    \item \textbf{Password request:} A legitimate service should not require a user to disclose a password through an unexpected email link.
+    \item \textbf{Suspicious link:} The recipient is instructed to use a link supplied by the message rather than independently accessing the service.
+    \item \textbf{Unexpected authentication request:} The request concerns sensitive account information and should be verified before any action is taken.
+\end{enumerate}
+
+\subsection{What Should the Recipient Do?}
+
+\begin{itemize}
+    \item Do not click the link in the suspicious email.
+    \item Do not enter a password, OTP, recovery code, or other sensitive information.
+    \item Open the official application or manually enter the known official website address.
+    \item Check the account status through the trusted service rather than through the email.
+    \item If necessary, contact the organization using a previously known or independently verified contact method.
+    \item Report the message through the organization's phishing-reporting mechanism.
+    \item Delete the message after reporting and preserve relevant evidence if instructed by the organization.
+\end{itemize}
+
+\subsection{What Should the Recipient NOT Do?}
+
+\begin{itemize}
+    \item Do not click the suspicious link just to see where it goes.
+    \item Do not reply to the sender to verify the request.
+    \item Do not provide passwords, OTPs, payment information, or recovery codes.
+    \item Do not download or open unexpected attachments.
+    \item Do not allow the deadline or threatening language to force an immediate decision.
+\end{itemize}
+
+\subsection{Reporting Method}
+
+The suspicious email should be reported using the organization's established phishing-reporting procedure. Depending on the environment, this may be an email-security reporting button, a security operations mailbox, a help-desk process, or another approved reporting channel. The recipient should follow the organization's documented procedure rather than replying to the suspicious sender.
+
+\subsection{Cybersecurity Connection}
+
+This scenario demonstrates how security awareness supports technical security controls. A user who recognizes urgency, impersonation, suspicious links, and credential requests can prevent an initial phishing attempt from becoming credential theft or account compromise. In a security operations environment, reported messages can also provide indicators for investigation, filtering, and incident response.
+
+\subsection{Security Risks and Protection}
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\textwidth}{|p{3.1cm}|X|X|}
+\hline
+\textbf{Warning Sign} & \textbf{Possible Risk} & \textbf{Protection}\\\hline
+24-hour deadline & Recipient acts without verification & Stop and verify independently\\\hline
+Account-blocking threat & Fear-based social engineering & Do not allow pressure to override verification\\\hline
+Password request & Credential theft & Never provide passwords through unexpected messages\\\hline
+Suspicious link & Fraudulent login page or malicious content & Access the official service independently\\\hline
+Unexpected email & Impersonation or unauthorized request & Confirm through a known contact method\\\hline
+\end{tabularx}
+\caption{Warning Signs and Protective Responses in the Scenario}
+\end{table}
+
+\subsection{Mini Practical / Try It Yourself}
+
+Use a fictional phishing message and safely identify its warning signs without opening any suspicious links or attachments.
+
+\begin{enumerate}
+    \item Identify the sender and determine whether the message was expected.
+    \item Look for urgent deadlines or threatening language.
+    \item Identify any request for passwords, OTPs, recovery codes, or payment information.
+    \item Inspect the visible destination of a link without opening it.
+    \item Record the warning signs and describe the safest response.
+\end{enumerate}
+
+\textbf{Safety Note:} Do not click suspicious links, download unknown attachments, submit credentials, or interact with real phishing websites.
+
+\subsection{Documentation References}
+
+\begin{enumerate}
+    \item CISA -- phishing-awareness and social-engineering guidance: \url{https://www.cisa.gov/topics/cyber-threats-and-advisories/social-engineering}
+    \item NIST -- Phishing, Small Business Cybersecurity Guidance: \url{https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing}
+\end{enumerate}
+
+\subsection{YouTube Learning Reference}
+
+\textbf{S.No. 5:} Professor Messer -- Social Engineering and Phishing Awareness.\\
+\url{https://www.youtube.com/results?search_query=Professor+Messer+social+engineering+phishing}
+
+\subsection{Quick Check}
+
+\begin{enumerate}
+    \item What makes the 24-hour deadline suspicious?
+    \item Why should the password-verification link not be used?
+    \item What is a safe way to check whether the account is actually at risk?
+    \item Where should the suspicious message be reported?
+\end{enumerate}
+
+\textbf{Answers}
+\begin{enumerate}
+    \item It creates urgency and pressure to act before the recipient can verify the request.
+    \item It may lead to a fraudulent website or other malicious content designed to steal credentials.
+    \item Access the official service independently through a known website, application, or trusted contact method.
+    \item It should be reported through the organization's approved phishing-reporting or security-support channel.
+\end{enumerate}
+
+\subsection{Task 5 Summary}
+
+The scenario shows how a phishing message can use urgency, threats, and credential requests to influence a recipient. The safest response is to stop, avoid interacting with the suspicious content, verify independently, report the message, and follow the organization's security procedure.
+
+\clearpage
+
+% ============================================================
+% TASK 6
+% ============================================================
+
+\section{Task 6: Security Awareness Activity}
+
+\subsection{Cyber Security Awareness Poster}
+
+The following poster presents practical security-awareness messages that can be applied to everyday computer and mobile-device use. The poster focuses on preventing common mistakes that can lead to account compromise, malware infection, or data exposure.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\textwidth]{images/cyber_security_awareness_poster.pdf}
+\caption{Cyber Security Awareness Poster}
+\end{figure}
+
+\subsection{Poster Safety Tips}
+
+\begin{enumerate}
+    \item \textbf{Do not share passwords:} Passwords and authentication codes should remain private.
+    \item \textbf{Be cautious with suspicious links:} Verify unexpected messages before clicking links.
+    \item \textbf{Use strong passwords:} Use unique passwords or passphrases for important accounts.
+    \item \textbf{Enable 2FA/MFA:} Use an additional authentication factor whenever the service supports it.
+    \item \textbf{Install updates:} Security updates help address known vulnerabilities in software and operating systems.
+    \item \textbf{Avoid unknown files:} Do not open unexpected attachments or install software from suspicious sources.
+\end{enumerate}
+
+\subsection{Why These Tips Matter}
+
+Security awareness is a preventive layer that helps users recognize and avoid unsafe actions. Password protection reduces credential exposure, MFA adds an additional authentication layer, updates reduce exposure to known vulnerabilities, and careful handling of links and files reduces common phishing and malware delivery paths.
+
+\subsection{Suggested Awareness Activity}
+
+The poster can be shared in a classroom, internship group, lab environment, or internal awareness channel. A participant can then be asked to identify which poster tip applies to a short security scenario, such as receiving an unexpected password-reset email, a suspicious attachment, or an unknown software installer.
+
+\textbf{Safety Note:} The activity should use fictional or educational examples. It should not collect real passwords, OTPs, personal information, or credentials.
+
+\subsection{Cybersecurity Connection}
+
+Security awareness supports the human side of cybersecurity. Technical controls such as email filtering, endpoint protection, MFA, firewalls, and patch management are more effective when users also understand why safe behavior is required. Awareness activities therefore help connect individual actions with broader preventive and incident-response controls.
+
+\subsection{Quick Check}
+
+\begin{enumerate}
+    \item Why should passwords never be shared with another person?
+    \item What should you do before clicking an unexpected link?
+    \item What additional protection does MFA provide?
+    \item Why should operating systems and applications be updated?
+    \item Why should unknown attachments and files be treated cautiously?
+\end{enumerate}
+
+\textbf{Answers}
+\begin{enumerate}
+    \item Sharing passwords can expose accounts to unauthorized access and removes control over the credential.
+    \item Verify the message and destination independently before interacting with the link.
+    \item MFA provides an additional authentication factor beyond the password.
+    \item Updates can address known security vulnerabilities and improve security protections.
+    \item They may contain malicious content or lead to malware infection or other compromise.
+\end{enumerate}
+
+\subsection{Task 6 Summary}
+
+The awareness poster communicates six practical security habits: keep passwords private, think before clicking, use strong passwords, enable MFA, keep devices updated, and avoid unknown files. These simple actions can reduce common phishing, malware, and account-compromise risks and can be reinforced through regular security-awareness activities.
+
+\subsection{Documentation References}
+
+\begin{enumerate}
+    \item CISA -- Secure Our World and phishing-awareness guidance.
+    \item FTC Consumer Advice -- phishing and scam-awareness guidance.
+    \item NIST -- Phishing guidance and phishing-awareness examples.
+    \item NIST Cybersecurity Framework 2.0.
+\end{enumerate}
+
+\end{document}

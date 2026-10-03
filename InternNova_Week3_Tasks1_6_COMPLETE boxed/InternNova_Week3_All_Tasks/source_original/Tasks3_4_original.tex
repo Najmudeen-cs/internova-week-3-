@@ -1,0 +1,560 @@
+% ============================================================
+% InternNova Week 3 - Tasks 3 & 4
+% Malware, Phishing & Security Awareness
+% No cover page: prepared to continue from Tasks 1 & 2.
+% Pattern follows the Week 2 report structure:
+% Task -> topic -> explanation -> diagram -> cybersecurity
+% connection -> security risk/protection -> reference basis ->
+% reference/standard -> learning video -> practical/check.
+% ============================================================
+
+\documentclass[12pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{placeins}
+\usepackage{needspace}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{longtable}
+
+% ---------- Formatting ----------
+\onehalfspacing
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black}
+\setlength{\emergencystretch}{3em}
+\sloppy
+\urlstyle{same}
+\Urlmuskip=0mu plus 1mu
+
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+\fancyhf{}
+\lhead{InternNova -- Week 3}
+\rhead{Tasks 3 \& 4: Phishing \& Malware Prevention}
+\cfoot{\thepage}
+
+\titleformat{\section}
+  {\Large\bfseries}{\thesection}{0.7em}{}
+\titleformat{\subsection}
+  {\large\bfseries}{\thesubsection}{0.7em}{}
+\titleformat{\subsubsection}
+  {\normalsize\bfseries}{\thesubsubsection}{0.7em}{}
+
+\setlist[itemize]{itemsep=3pt,topsep=4pt}
+\setlist[enumerate]{itemsep=3pt,topsep=4pt}
+
+% ---------- Reusable reference blocks ----------
+\newcommand{\referenceblock}[2]{%
+\begin{samepage}
+\noindent\textbf{Reference basis:} #1\par
+\smallskip
+\noindent\url{#2}\par
+\end{samepage}
+\par\vspace{0.25cm}
+}
+
+\newcommand{\paperblock}[2]{%
+\begin{samepage}
+\noindent\textbf{Reference / Standard:} #1\par
+\smallskip
+\noindent\url{#2}\par
+\end{samepage}
+\par\vspace{0.25cm}
+}
+
+\newcommand{\videoblock}[3]{%
+\begin{samepage}
+\noindent\textbf{Learning Video -- S.No. #1:} #2\par
+\smallskip
+\noindent\url{#3}\par
+\end{samepage}
+\par\vspace{0.25cm}
+}
+
+\begin{document}
+\setcounter{page}{1}
+
+% ============================================================
+% TASK 3
+% ============================================================
+
+\section{Task 3: Identify a Phishing Message}
+
+\subsection{Introduction}
+
+Phishing messages are designed to appear trustworthy while attempting
+to persuade a recipient to click a link, open an attachment, provide
+sensitive information, or perform another action. A safe analysis
+should therefore focus on observable warning signs rather than on
+interacting with the suspicious message.
+
+For this task, two publicly documented phishing examples from
+security-awareness resources were reviewed. The examples are used only
+for educational analysis. Suspicious links, attachments, phone numbers,
+and websites should not be opened or contacted during the analysis.
+
+\subsection{Phishing Message Analysis Process}
+
+A phishing message can be examined systematically by checking the
+sender, links, language, requested information, and other unusual
+content. After identifying the warning signs, the safest response is
+to verify independently, report the message when appropriate, and
+delete it.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\textwidth]{images/phishing_analysis_flow.png}
+\caption{Phishing Message Analysis Process}
+\label{fig:phishing-analysis}
+\end{figure}
+\FloatBarrier
+
+\subsection{Phishing Identification Checklist}
+
+The following checklist groups common indicators that can be reviewed
+without interacting with a suspicious message.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{images/phishing_identification_checklist.png}
+\caption{Phishing Identification Checklist}
+\label{fig:phishing-checklist}
+\end{figure}
+\FloatBarrier
+
+\subsection{Public Example 1: Fake MetaMask Phishing Email}
+
+The U.S. Federal Trade Commission (FTC) published examples of fake
+MetaMask and PayPal messages. The MetaMask message falsely claimed that
+the recipient's cryptocurrency wallet was blocked and created pressure
+to act quickly by clicking a link and updating the wallet. The FTC
+warned that unexpected messages asking users to act quickly, click a
+link, or call a number are common phishing patterns.
+
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{|p{4.0cm}|p{9.2cm}|}
+\hline
+\textbf{Indicator} & \textbf{Analysis}\\
+\hline
+Suspicious sender & The message impersonates a trusted service. The sender identity should not be accepted only because the message uses a familiar company name.\\
+\hline
+Suspicious link & The message asks the recipient to click a link to update or resolve the wallet problem. The link should not be opened.\\
+\hline
+Urgent / threatening language & It claims the wallet is blocked and suggests that the recipient must act quickly or risk losing cryptocurrency.\\
+\hline
+Spelling / grammar & Poor writing is not required for a message to be phishing. Modern phishing messages may be professionally written, so grammar alone is not a reliable test.\\
+\hline
+Request for personal information & The requested wallet update is intended to make the recipient interact with a fraudulent destination and potentially expose sensitive information.\\
+\hline
+Other suspicious element & The problem is unexpected and creates pressure to solve it through the message itself instead of independently verifying the account.\\
+\hline
+\end{tabular}
+\caption{Analysis of the FTC MetaMask phishing example}
+\label{tab:metamask-analysis}
+\end{table}
+
+\textbf{Why it should not be trusted:} The message combines impersonation,
+urgency, and a request to click a link. A safer approach is to open the
+official service independently or use a known contact method instead of
+using information supplied by the message.
+
+\referenceblock{FTC, ``Those urgent emails from MetaMask and PayPal are phishing scams.''}{https://consumer.ftc.gov/comment/181991}
+
+\subsection{Public Example 2: Fake Direct-Deposit Phishing Email}
+
+NIST's phishing-awareness material includes a sample direct-deposit
+phishing email. The example appears to come from an individual and
+claims that the sender has changed banks and needs direct-deposit
+information updated before the previous account is closed. It creates
+pressure to provide assistance promptly.
+
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{|p{4.0cm}|p{9.2cm}|}
+\hline
+\textbf{Indicator} & \textbf{Analysis}\\
+\hline
+Suspicious sender & The educational example shows an email from an address that does not provide sufficient assurance that the sender is really the person represented. Sender identity should be independently verified.\\
+\hline
+Suspicious link & The published description does not identify a specific embedded URL as the main indicator. The absence of a visible link does not make the request trustworthy.\\
+\hline
+Urgent / threatening language & The sender says the previous bank account will be closed in a few days and asks for prompt assistance, creating time pressure.\\
+\hline
+Spelling / grammar & The example is relatively well written. This demonstrates that correct spelling and grammar do not prove that an email is legitimate.\\
+\hline
+Request for personal information & The message attempts to obtain information related to direct-deposit banking details, which is highly sensitive.\\
+\hline
+Other suspicious element & A request to change payment or banking information should be independently verified through a trusted organizational process.\\
+\hline
+\end{tabular}
+\caption{Analysis of the NIST direct-deposit phishing example}
+\label{tab:direct-deposit-analysis}
+\end{table}
+
+\textbf{Why it should not be trusted:} A request involving salary or
+banking information is high impact. The recipient should verify the
+request using a known phone number, internal system, or previously
+established contact method rather than replying to the suspicious
+message.
+
+\referenceblock{NIST, ``Phishing Cues-SOUPS Poster'' -- sample direct-deposit phishing email.}{https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=956178}
+
+\subsection{Comparison of the Two Phishing Examples}
+
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{|p{3.0cm}|p{5.0cm}|p{5.0cm}|}
+\hline
+\textbf{Indicator} & \textbf{Example 1: MetaMask} & \textbf{Example 2: Direct Deposit}\\
+\hline
+Impersonation & Trusted cryptocurrency service & Individual / organizational identity\\
+\hline
+Pressure & Act quickly to avoid loss of cryptocurrency & Act promptly before an account is closed\\
+\hline
+Sensitive target & Wallet/account information & Banking and payroll information\\
+\hline
+Link involvement & Link requested to resolve the fake problem & No specific embedded link identified in the published description\\
+\hline
+Safe response & Independently verify the wallet/service & Independently verify through a trusted organizational channel\\
+\hline
+\end{tabular}
+\caption{Comparison of two publicly documented phishing examples}
+\label{tab:phishing-comparison}
+\end{table}
+
+\subsection{Cybersecurity Connection}
+
+Phishing is directly connected to identity theft, credential theft,
+malware delivery, financial fraud, and unauthorized account access.
+A successful phishing attempt can also become the first stage of a
+larger attack. Security awareness therefore acts as an important
+preventive control alongside technical controls such as spam filters,
+endpoint security, multi-factor authentication, and email protection.
+
+\subsection{Security Risks and Basic Protection}
+
+\textbf{Major Risks:}
+\begin{itemize}
+    \item Theft of usernames, passwords, OTPs, and financial information.
+    \item Installation of malware through malicious links or attachments.
+    \item Account takeover after stolen credentials are reused.
+    \item Financial loss and identity theft.
+    \item Further compromise of an organization after an employee is deceived.
+\end{itemize}
+
+\textbf{Basic Protection:}
+\begin{itemize}
+    \item Do not click unexpected links or open unexpected attachments.
+    \item Verify suspicious requests using an independently known contact method.
+    \item Use multi-factor authentication on important accounts.
+    \item Report suspicious messages through the appropriate reporting mechanism.
+    \item Delete phishing messages after reporting and documenting them when required.
+\end{itemize}
+
+\referenceblock{CISA, ``Avoid Phishing Scams with Three Simple Tips.''}{https://www.cisa.gov/sites/default/files/2024-09/Secure-Our-World-Phishing-Tip-Sheet.pdf}
+
+\paperblock{NIST, ``Phishing'' -- Small Business Cybersecurity Guidance}{https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing}
+
+\videoblock{1}{Professor Messer -- Phishing and Social Engineering}{https://www.youtube.com/results?search_query=Professor+Messer+phishing+social+engineering}
+
+\subsection{Quick Check}
+
+\begin{enumerate}
+    \item Why should a suspicious link not be opened during analysis?
+    \item Name two common warning signs of a phishing message.
+    \item Why should a request for banking or password information be verified independently?
+    \item Is poor grammar required for a message to be phishing?
+\end{enumerate}
+
+\subsubsection*{Answers}
+
+\begin{enumerate}
+    \item Because the link may lead to a fraudulent website or malicious content.
+    \item Examples include an unusual sender, suspicious link, urgent language, unexpected attachment, or request for sensitive information.
+    \item Because the message may be impersonating a trusted person or organization and could be attempting to steal sensitive information.
+    \item No. A phishing message can be professionally written, so grammar alone is not a reliable indicator.
+\end{enumerate}
+
+\subsection{Task 3 Summary}
+
+The two public examples demonstrate that phishing messages often rely
+on impersonation, urgency, unexpected requests, suspicious links, and
+attempts to obtain sensitive information. A safe analysis does not
+require interacting with the suspicious content. Instead, the message
+should be examined for warning signs and verified through an
+independent trusted channel.
+
+% ============================================================
+% TASK 4
+% ============================================================
+
+\section{Task 4: Malware Prevention}
+
+\subsection{Introduction}
+
+Malware prevention combines technical controls, safe software habits,
+secure account practices, backups, and user awareness. No single
+control eliminates every malware risk, so several protective measures
+should be used together.
+
+\subsection{Malware Prevention -- Overall Security Process}
+
+A basic prevention process begins with keeping the device updated and
+using security software. Trusted applications, safe downloads,
+careful handling of attachments, strong authentication, and backups
+further reduce the likelihood or impact of malware incidents.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.36\textwidth]{images/malware_prevention_overall.png}
+\caption{Malware Prevention -- Overall Security Process}
+\label{fig:malware-overall}
+\end{figure}
+\FloatBarrier
+
+\subsection{Ten Malware Prevention Practices}
+
+The following ten practices provide a practical baseline for reducing
+malware risk on computers and mobile devices.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.70\textwidth]{images/ten_malware_prevention_practices.png}
+\caption{Ten Malware Prevention Practices}
+\label{fig:ten-malware-practices}
+\end{figure}
+\FloatBarrier
+
+\begin{enumerate}
+    \item \textbf{Keep software updated} -- Install operating-system and application security updates.
+    \item \textbf{Use security software} -- Use reputable antivirus or endpoint protection where appropriate.
+    \item \textbf{Use trusted applications} -- Install software from official or otherwise trusted sources.
+    \item \textbf{Use safe downloads} -- Avoid unknown files and suspicious download websites.
+    \item \textbf{Be careful with attachments} -- Do not open unexpected or suspicious files.
+    \item \textbf{Use strong passwords} -- Use unique passwords or passphrases for important accounts.
+    \item \textbf{Enable multi-factor authentication} -- Add an additional verification factor where supported.
+    \item \textbf{Maintain regular backups} -- Keep protected copies of important data.
+    \item \textbf{Use firewall protection} -- Control unnecessary network connections and exposure.
+    \item \textbf{Maintain security awareness} -- Recognize suspicious files, links, prompts, and behavior.
+\end{enumerate}
+
+\subsection{Detailed Explanation of Five Practices}
+
+\subsubsection{1. Keep Software Updated}
+
+Software updates frequently contain security fixes that address known
+vulnerabilities. Keeping the operating system, browser, applications,
+and security tools updated reduces exposure to vulnerabilities that
+attackers may attempt to exploit.
+
+\textbf{Practical action:} Enable automatic updates where appropriate
+and regularly check for updates for software that does not update
+automatically.
+
+\subsubsection{2. Use Security Software}
+
+Reputable antivirus or endpoint-security software can help detect,
+block, quarantine, or remove malicious software. Security software is
+not a replacement for safe behavior, but it provides an additional
+layer of protection.
+
+\textbf{Practical action:} Keep security software active and updated,
+and perform scans when suspicious behavior is observed.
+
+\subsubsection{3. Use Trusted Applications and Safe Downloads}
+
+Applications should be obtained from official stores, known vendors,
+or other trusted sources. Unofficial or modified installers can contain
+malware or unwanted software. Users should also verify the publisher
+and download source before installation.
+
+\textbf{Practical action:} Check the official website or trusted app
+store, verify the publisher, and avoid suspicious download portals.
+
+\subsubsection{4. Avoid Unknown Attachments}
+
+Malware can be delivered through malicious email attachments and other
+unexpected files. A file that appears to be an invoice, document, or
+image may contain malicious content or direct the user to a harmful
+website.
+
+\textbf{Practical action:} Verify unexpected attachments through a
+separate trusted channel before opening them.
+
+\subsubsection{5. Maintain Regular Backups}
+
+Backups reduce the impact of data loss caused by malware, accidental
+deletion, hardware failure, or ransomware. A useful backup strategy
+keeps copies protected from unauthorized modification or deletion.
+
+\textbf{Practical action:} Back up important files regularly and
+periodically verify that the backup can actually be restored.
+
+\subsection{Malware Backup and Recovery Process}
+
+Backups are particularly important when malware causes data loss or
+makes files unavailable. A safe recovery process isolates the affected
+device, removes or rebuilds the compromised system, and restores data
+from a trusted backup.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{images/malware_backup_recovery.png}
+\caption{Malware Backup and Recovery Process}
+\label{fig:backup-recovery}
+\end{figure}
+\FloatBarrier
+
+\textbf{Important point:} A backup that remains permanently connected
+and writable by the infected system may also be affected by malware.
+Backups should therefore be protected against unauthorized modification
+or deletion.
+
+\subsection{Safe Software Download and Installation}
+
+Software should be obtained from a trusted source and checked before
+installation. If the source is suspicious or cannot be verified, the
+safest action is to stop rather than continue with the installation.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\textwidth]{images/safe_software_download.png}
+\caption{Safe Software Download and Installation}
+\label{fig:safe-download}
+\end{figure}
+\FloatBarrier
+
+\referenceblock{CISA, ``Secure Our World -- Malware and software security guidance.''}{https://www.cisa.gov/secure-our-world}
+
+\paperblock{NIST, ``Cybersecurity Framework (CSF) 2.0'' -- protection, detection, response, and recovery concepts}{https://www.nist.gov/cyberframework}
+
+\videoblock{2}{Professor Messer -- Malware and Malware Prevention}{https://www.youtube.com/results?search_query=Professor+Messer+malware+prevention}
+
+\subsection{Cybersecurity Connection}
+
+Malware prevention is a layered security activity. Updates reduce
+known vulnerabilities, security software provides detection, trusted
+software sources reduce supply-chain and malicious-download risks,
+backups support recovery, firewalls reduce unnecessary exposure, and
+security awareness reduces unsafe user actions.
+
+These controls correspond to the broader cybersecurity cycle of
+protecting systems, detecting suspicious activity, responding to
+incidents, and recovering from security events.
+
+\subsection{Security Risks and Basic Protection}
+
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{|p{4.0cm}|p{4.5cm}|p{4.5cm}|}
+\hline
+\textbf{Risk} & \textbf{Possible Impact} & \textbf{Basic Protection}\\
+\hline
+Unpatched software & Exploitation of known vulnerabilities & Apply security updates\\
+\hline
+Malicious download & Malware infection & Use trusted sources and verify software\\
+\hline
+Malicious attachment & Malware execution or credential theft & Verify unexpected attachments before opening\\
+\hline
+Weak authentication & Account compromise & Use strong unique passwords and MFA\\
+\hline
+Data loss / ransomware & Loss or encryption of important files & Maintain protected backups\\
+\hline
+Unnecessary network exposure & Increased attack surface & Use firewall controls and secure configurations\\
+\hline
+User error & Unsafe execution or disclosure & Maintain security awareness and training\\
+\hline
+\end{tabular}
+\caption{Common malware risks and basic protection}
+\label{tab:malware-risks}
+\end{table}
+
+\subsection{Mini Practical: Safe Software Verification}
+
+A simple practical activity can be performed without downloading
+unknown software.
+
+\begin{enumerate}
+    \item Select a commonly used application that is already installed or that you legitimately need.
+    \item Locate the official vendor website or trusted application store.
+    \item Check the publisher or developer name.
+    \item Compare the software name and version information with the official source.
+    \item Do not install the application if the source, publisher, or download details appear suspicious.
+\end{enumerate}
+
+\textbf{Security Note:} The practical should not involve executing an
+unknown file or visiting a suspicious download site. The objective is
+to practice safe verification, not to test malware.
+
+\referenceblock{CISA, ``Avoiding Social Engineering and Phishing'' -- safe handling of suspicious content.}{https://www.cisa.gov/topics/cyber-threats-and-advisories/social-engineering}
+
+\subsection{Quick Check}
+
+\begin{enumerate}
+    \item Why are software updates important for malware prevention?
+    \item Why should software be downloaded from trusted sources?
+    \item How can backups reduce the impact of ransomware or data loss?
+    \item Why are strong passwords and MFA useful against malware-related account compromise?
+    \item Why should unexpected attachments be verified before opening?
+\end{enumerate}
+
+\subsubsection*{Answers}
+
+\begin{enumerate}
+    \item Updates can fix known security vulnerabilities that attackers may exploit.
+    \item Trusted sources reduce the chance of installing modified, malicious, or unwanted software.
+    \item Backups provide clean copies of important data that can be restored after an incident.
+    \item They make unauthorized account access more difficult, even if a password is exposed.
+    \item An unexpected attachment may contain malicious content or lead to further compromise.
+\end{enumerate}
+
+\subsection{Task 4 Summary}
+
+Malware prevention requires multiple layers of protection rather than
+one security tool. Keeping software updated, using security software,
+choosing trusted applications and downloads, handling attachments
+carefully, protecting accounts, maintaining backups, using firewalls,
+and developing security awareness all contribute to reducing malware
+risk.
+
+% ============================================================
+% DOCUMENTATION REFERENCES
+% ============================================================
+
+\Needspace{5cm}
+\subsection{Documentation References}
+
+\begin{enumerate}
+    \item CISA -- Secure Our World and phishing-awareness guidance.
+    \item FTC Consumer Advice -- phishing and scam-awareness guidance.
+    \item NIST -- Phishing guidance and phishing-awareness examples.
+    \item NIST Cybersecurity Framework 2.0.
+\end{enumerate}
+
+\Needspace{4cm}
+\subsection{YouTube Learning References}
+
+\begin{enumerate}
+    \item Professor Messer -- Phishing and Social Engineering.
+    \item Professor Messer -- Malware and Malware Prevention.
+\end{enumerate}
+
+\end{document}
